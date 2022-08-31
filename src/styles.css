@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import '~font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'poppins';
+}
+a.active{
+    background: #0077ff;
+}
+.message{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    text-transform: uppercase; 
+    font-family: consolas;
+    letter-spacing: 5px;
+    color: #eaeaea;
+    font-size: 2em;
+    z-index: 10;
+    /* text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255,255,255,1); */
+}

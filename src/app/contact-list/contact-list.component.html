@@ -1,0 +1,44 @@
+<input type="checkbox" name="" id="" class="checkbox">
+<section id="blur">
+    <div  *ngIf="goodTable.length != 0 ">
+    <table>
+        <tr>
+            <th>Serial Number</th>
+            <th>Name of Goods</th>
+            <th>Amount</th>
+            <th>Quantity</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tr  *ngFor="let id = index; let item of goodTable">
+           <td>{{id+1}}</td>
+           <td>{{item['name_good']}}</td>
+           <td>{{item["amount_goods"]}}</td>
+            <td>{{item["quantity"]}}</td>
+            <td>{{item["totalquantity"]}}</td>
+            <td><a class="a" (click)="view(id,item)">View</a></td>
+            <td>
+            <a class="a" (click)="edit(id,item)">Edit</a>
+           </td>
+           <td class='btn'>
+               <a (click)="delete(id)" class="a">Delete</a>
+           </td>
+        </tr>
+    </table>
+</div>
+</section>
+<div id="popup">
+    <h2>Edit Your Item</h2>
+   <input type="text" name="" id="" placeholder="Name of Good" [(ngModel)]="name_good">
+   <input type="text" name="" id="" placeholder="Amount" [(ngModel)]="amount_goods">
+   <input type="text" name="" id="" placeholder="Quantity" [(ngModel)]="quantity">
+    <a (click)="updateGood()" class="button">Update</a>
+</div>
+<div id="viewup">
+    <h2>View Your Item</h2>
+    <input type="text" name="" id="" [(ngModel)]="name_good" disabled>
+    <input type="text" name="" id="" [(ngModel)]="amount_goods" disabled>
+    <input type="text" name="" id="" [(ngModel)]="quantity" disabled>
+    <a (click)="cancel()" class="button">Cancel</a>
+</div>

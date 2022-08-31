@@ -1,0 +1,24 @@
+<input type="checkbox" name="" id="">
+<div class="container">
+    <p class='message'>{{message}}</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="form">
+        <h2>Create Item Total Amount</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label>Amount</label>
+                <input type="number" name="" id="" placeholder="#5000" [(ngModel)]="total_amount">
+            </div>
+            <div class="inputBox">
+                <label for="password">Date</label>
+                <input type="date" name="" id="" [(ngModel)]="date">
+            </div>
+            <div class="inputBox">
+                <input type="submit" name="" id="" value="Submit" (click)="createtAmount()">
+            </div>
+        </div>
+        <p class="forget">Done this before? <a routerLink="/showDate">Click Here</a></p>
+    </div>
+</div>
+<router-outlet></router-outlet>

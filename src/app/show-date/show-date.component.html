@@ -1,0 +1,26 @@
+<input type="checkbox" name="" id="">
+<div  *ngIf="BudgetArray.length != 0">
+    <section>
+        <p class="message">{{message}}</p>
+        <div class="center">
+         <div *ngFor="let id = index; let amount of Budget">
+            <a routerLink="amount/{{id}}">
+                <div>
+                    <div>
+                        <span>{{amount.date}}</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </a>    
+        </div>    
+       </div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </section>
+</div>

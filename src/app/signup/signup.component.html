@@ -1,0 +1,31 @@
+<input type="checkbox" name="" id="">
+<body>
+     <p class="message">{{message}}</p> 
+    <div class="box4"><div>{{amountMessage}}</div><span class="boxtext">{{total_amount}}</span>
+    <div class="remain">Amount Used Up: </div><span class="boxtext1">{{result}}</span>
+    <div class="remain1">Amount Remaining: </div><span class="boxtext2">{{amountRemaining}}</span>
+    </div>
+    <div class="login-div">
+        <div class="logo"></div>
+        <div class="title">Shopping List</div>
+        <div class="sub-title">ADD AN ITEM</div>
+        <div class="fields">
+            <div class="username">
+              <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+                <input type="text" name="" class="user-input" placeholder="Name of Goods" id="" [(ngModel)]="name_good">
+            </div>
+            <div class="password">
+                <i class="fa fa-money fa-lg" aria-hidden="true"></i>
+                <input type="number" name="" class="pass-input" placeholder="Amount" id="" [(ngModel)]="amount_goods">
+            </div>
+            <div class="password">
+                <i class="fa fa-balance-scale fa-lg" aria-hidden="true"></i>
+                <input type="number" name="" class="pass-input" placeholder="Quantity" id="" [(ngModel)]="quantity">
+            </div>
+        </div>
+        <button class="signin-btn" (click)="creategoods()">Submit</button>
+        <div class="link">
+            <a href="#">Done Adding?</a> click <a routerLink="details" class="view">View Goods</a>
+        </div>
+    </div>
+</body>
