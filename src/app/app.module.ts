@@ -13,6 +13,7 @@ import { ShowDateComponent } from './show-date/show-date.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ViewListComponent } from './view-list/view-list.component';
+import { PasswordDirective } from './directives/password.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewListComponent } from './view-list/view-list.component';
     ShowDateComponent,
     SignUpComponent,
     SignInComponent,
-    ViewListComponent
+    ViewListComponent,
+    PasswordDirective
   ],
   imports: [
     BrowserModule,

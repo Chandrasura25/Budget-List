@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder,AbstractControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactService } from 'src/services/contact.service';
 
@@ -18,9 +18,17 @@ export class SignUpComponent implements OnInit {
     phone_no:[''],
     address:[''],
     email:[''],
-    password:[''],
+    password:['',this.validate],
     Budget:[[]]
   });
+  validate(control:AbstractControl): {[key: string] : any} | null {
+    if (control.value) {
+      if (control.value.test(new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$")) == false) {
+        return {codeError: true}
+      } 
+    } 
+    return null
+   }
   ngOnInit(): void {
     this.usersArray = this.contactService.getUser()
     console.log(this.usersArray);

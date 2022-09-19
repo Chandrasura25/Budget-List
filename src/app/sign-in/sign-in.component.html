@@ -15,7 +15,10 @@
                     <div class="icon">
                         <img src="/assets/lock.png" height="20" alt="">
                     </div>
-                    <input type="password" name="password" id="" [(ngModel)]="password">
+                    <input type="password" name="password" id="" [(ngModel)]="password" #pass="ngModel" appPassword [class.is-valid]="pass.valid && pass.touched" [class.is-invalid]="pass.invalid && pass.touched">
+                    <div *ngIf="pass.invalid &&pass.dirty">
+                        <span *ngIf="pass.errors?.['codeError']" class="text-danger">Please input an uppercase,lowercase,special characters and must be greater or equal eight </span>
+                        </div>
                 </div>
             </div>
             <label for=""><input type="checkbox" name="" id="">Remember Me</label>
