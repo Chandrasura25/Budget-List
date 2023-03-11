@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  // let navigation = document.querySelector('.navigation');
+  //   navigation.onclick = function(){
+  //           navigation.classList.toggle('active')
+  //       }
  
 }
